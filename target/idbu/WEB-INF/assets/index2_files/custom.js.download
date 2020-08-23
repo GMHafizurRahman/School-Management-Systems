@@ -1,0 +1,445 @@
+jQuery(function () {
+  var _rys = jQuery.noConflict();
+    _rys('#myCarousel').carousel({
+        interval: false,
+        auto: true,
+        loop: true,
+    });
+    var clickEvent = false;
+    _rys('#myCarousel').on('click', '.nav a', function() {
+            clickEvent = true;
+            _rys('.nav li').removeClass('active');
+            _rys(this).parent().addClass('active');        
+    }).on('slid.bs.carousel', function(e) {
+        if(!clickEvent) {
+            var count = _rys('.nav').children().length -1;
+            var current = _rys('.nav li.active');
+            current.removeClass('active').next().addClass('active');
+            var id = parseInt(current.data('slide-to'));
+            if(count == id) {
+                _rys('.nav li').first().addClass('active');    
+            }
+        }
+        clickEvent = false;
+    });
+
+     function toggleIcon(e) {
+    _rys(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+_rys('.panel-group').on('hidden.bs.collapse', toggleIcon);
+_rys('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+
+    _rys(document).ready(function(){   
+     _rys("#nuadministrator").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: false,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+    _rys('.bxslider').bxSlider({
+      mode: 'horizontal',
+      captions: true,
+      auto: true,
+      autoControls: true,
+      default: 5000
+      
+
+    });
+
+   _rys(document).ready(function(){   
+     _rys("#important-development").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: false,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#planning-development").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#examination-notice").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+     _rys(document).ready(function(){   
+     _rys("#nu-library").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#nu-examination").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#finance-account").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#ict-directorate").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+     _rys(document).ready(function(){   
+     _rys("#public-relations").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+    _rys(document).ready(function(){   
+     _rys("#engineering-transport").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#medical-services-department").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#physical-education").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+_rys(document).ready(function(){   
+     _rys("#physical-education").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+_rys(document).ready(function(){   
+     _rys("#proctor-division").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+_rys(document).ready(function(){   
+     _rys("#internal-audit-department").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+      });
+    });
+
+    _rys(document).ready(function(){   
+     _rys("#vice-book").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: false,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+
+_rys(document).ready(function(){   
+     _rys("#news-wrapper-box").owlCarousel({
+        items : 2,
+        pagination:false,
+        navigation: false,
+        autoPlay: true,
+        itemsDesktop : [1170,3],
+        itemsDesktopSmall : [979,2],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+ _rys(document).ready(function(){   
+     _rys("#news-events").owlCarousel({
+        items : 4,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,2],
+        itemsDesktopSmall : [979,2],
+        itemsTablet: [768, 2],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+ _rys(document).ready(function(){   
+     _rys("#connected-list").owlCarousel({
+        items : 5,
+        pagination:false,
+        navigation: true,
+        autoPlay: true,
+        itemsDesktop : [1170,2],
+        itemsDesktopSmall : [979,2],
+        itemsTablet: [768, 2],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+ _rys(document).ready(function(){   
+     _rys("#nu-newspaper").owlCarousel({
+        items : 1,
+        pagination:false,
+        navigation: false,
+        autoPlay: true,
+        itemsDesktop : [1170,1],
+        itemsDesktopSmall : [979,1],
+        itemsTablet: [768, 1],
+        itemsMobile: [480, 1],
+        navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+        ]  
+
+      });
+    });
+
+// _rys(document).ready(function(){ 
+
+//     _rys('.nav-tabs-dropdown').each(function(i, elm) {
+    
+//     _rys(elm).text(_rys(elm).next('ul').find('li.active a').text());
+    
+// });
+  
+// _rys('.nav-tabs-dropdown').on('click', function(e) {
+
+//     e.preventDefault();
+    
+//     _rys(e.target).toggleClass('open').next('ul').slideToggle();
+    
+// });
+
+// _rys('#nav-tabs-wrapper a[data-toggle="tab"]').on('click', function(e) {
+
+//     e.preventDefault();
+    
+//     _rys(e.target).closest('ul').hide().prev('a').removeClass('open').text(_rys(this).text());
+      
+// });
+
+// });
+
+  jQuery(document).ready(function()
+  {
+      jQuery(".dropdown-toggle").dropdown();
+      jQuery('ul  li').hover(
+         function(){ jQuery(this).addClass('open') },
+         function(){ jQuery(this).removeClass('open') }
+  )
+  });
+
+
+jQuery(".nu-notice").bootstrapNews({
+        newsPerPage: 20,
+        navigation: true,
+        autoplay: true,
+        direction:'up', // up or down
+        animationSpeed: 'normal',
+        newsTickerInterval: 2000, //4 secs
+        pauseOnHover: true,
+        onStop: null,
+        onPause: null,
+        onReset: null,
+        onPrev: null,
+        onNext: null,
+        onToDo: null
+});
+
+  });
+

@@ -1,0 +1,19 @@
+var j = jQuery.noConflict();
+  j(document).ready(function(){
+  //Función elemental para ir al tope del sitio web
+  j('.top').click(function(){
+    j('body, html').animate({
+      scrollTop: '0px'
+    }, 1000);
+    return false;
+  });
+  //Condicional para mostrar o esconder el boton ir-arriba cuando el usuario haga scroll
+  j(window).scroll(function(){
+    //Esconder (scrollTop) ó mostrar (scrollDown) el elemento si el usuario hace scroll a partir de los 200px del tope de la página.
+    if( j(this).scrollTop() > 200 ){
+      j('.top').slideDown(300);
+    }else {
+      j('.top').slideUp(300);
+    }
+  });
+});
